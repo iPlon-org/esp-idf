@@ -41,7 +41,7 @@
 
 [submodule "components/asio/asio"]
 	path = components/asio/asio
-	url = ../../espressif/asio.git
+	url = ../../iPlon-org/asio.git
 
 [submodule "components/expat/expat"]
 	path = components/expat/expat

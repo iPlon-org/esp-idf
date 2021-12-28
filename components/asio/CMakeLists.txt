@@ -21,9 +21,11 @@ if(CONFIG_ASIO_SSL_SUPPORT)
     endif()
 endif()
 
+
 idf_component_register(SRCS ${asio_sources}
                     INCLUDE_DIRS "asio/asio/include" "port/include"
                     REQUIRES lwip)
+target_compile_definitions(${COMPONENT_LIB} PUBLIC "-DASIO_DISABLE_SIGACTION" "-DASIO_DISABLE_SIGNAL")
 
 if(CONFIG_ASIO_SSL_SUPPORT)
     if(CONFIG_ASIO_USE_ESP_WOLFSSL)
